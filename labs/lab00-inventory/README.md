@@ -1,24 +1,35 @@
-# Lab 0 — Inventory your own machine
+﻿# Lab 0 — Inventory My Own Machine
 
-Pair:                     Driver first half:
-Machine:
-Date:
+**Week:** 1  
+**Outcome:** CLO 1  
+**Operating System:** Windows 10/11
 
-## What I did
+## Inventory
 
-Steps, with commands in code blocks. Not prose about the steps.
+| What | Value | Where I got it |
+|---|---|---|
+| CPU model | Intel Core i5-11400H @ 2.70 GHz | `Get-CimInstance Win32_Processor` |
+| CPU core count | 6 | `Get-CimInstance Win32_Processor` |
+| CPU thread count | 12 | `Get-CimInstance Win32_Processor` |
+| Total installed RAM | 16 GB (15.73 GB reported by Windows) | `Get-CimInstance Win32_PhysicalMemory`; `Get-CimInstance Win32_ComputerSystem` |
+| Installed memory modules | 1 detected module | `Get-CimInstance Win32_PhysicalMemory` |
+| Memory speed | 3200 MT/s | `Get-CimInstance Win32_PhysicalMemory` |
+| Memory manufacturer | Micron Technology | `Get-CimInstance Win32_PhysicalMemory` |
+| Disk model | INTEL SSDPEKNU512GZ | `Get-PhysicalDisk` |
+| Disk type | NVMe SSD | `Get-Disk` |
+| Disk capacity | 476.94 GB | `Get-PhysicalDisk` |
+| Free space on VM volume C: | 97.12 GB | `Get-Volume -DriveLetter C` |
+| Firmware type | UEFI | `Get-ComputerInfo -Property BiosFirmwareType` |
+| Firmware version | FX506HM.318 | `Get-CimInstance Win32_BIOS` |
+| Firmware release date | 2025-06-17 | `Get-CimInstance Win32_BIOS` |
+| Hardware virtualization supported | Yes | `Get-CimInstance Win32_Processor` |
+| Hardware virtualization enabled | Yes | `Get-CimInstance Win32_Processor` |
+| SLAT supported | Yes | `Get-CimInstance Win32_Processor` |
 
-```
-<command>
-<output, trimmed>
-```
+## What did not work
 
-## Result
+No command failures were reported during the checks shown.
 
-## What did not work the first time
+## Virtualization
 
-At least one thing. What I saw, what it turned out to be, what I did about it.
-
-## Evidence
-
-- [evidence/](evidence/) — one line per file on what it proves
+Hardware virtualization is supported and enabled. VM monitor mode extensions and Second Level Address Translation (SLAT) are available. The system uses UEFI firmware.
