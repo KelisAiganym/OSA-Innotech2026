@@ -28,7 +28,7 @@
 
 ## What did not work
 
-No command failures were reported during the checks shown.
+As this was my first time working with PowerShell and GitHub, I found several steps difficult at first. I needed extra attempts to understand how to run the commands correctly, save the command outputs as evidence files, and organize the files in the correct repository folders. I also needed to run an additional command to confirm the NVMe bus type. I learned how to correct these issues and organize my evidence properly
 
 ## Virtualization
 
