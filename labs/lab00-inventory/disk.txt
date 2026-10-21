@@ -1,4 +1,4 @@
-﻿Get-PhysicalDisk \| Select-Object FriendlyName, MediaType, Size
+﻿Get-PhysicalDisk | Select-Object FriendlyName, MediaType, Size
 
 === Physical disks ===
 
