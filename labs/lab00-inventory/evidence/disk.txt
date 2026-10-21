@@ -2,17 +2,22 @@
 
 === Physical disks ===
 
-
 FriendlyName : INTEL SSDPEKNU512GZ
 MediaType    : SSD
 SizeGB       : 476.94
 
 
+Get-Volume -DriveLetter C | Select-Object DriveLetter, FileSystem, @{Name='SizeGB';Expression={[math]::Round($_.Size / 1GB, 2)}}, @{Name='FreeSpaceGB';Expression={[math]::Round($_.SizeRemaining / 1GB, 2)}}
 
 === Volume C ===
 
+DriveLetter FileSystem SizeGB FreeSpaceGB
+----------- ---------- ------ -----------
+          C NTFS       475.98       94.05
 
-DriveLetter : C
-FileSystem  : NTFS
-SizeGB      : 475.98
-FreeSpaceGB : 97.12
+
+Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType
+
+FriendlyName        MediaType BusType
+------------        --------- -------
+INTEL SSDPEKNU512GZ SSD       NVMe
