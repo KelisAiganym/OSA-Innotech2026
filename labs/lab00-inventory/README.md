@@ -16,7 +16,7 @@
 | Memory speed | 3200 MT/s | `Get-CimInstance Win32_PhysicalMemory` |
 | Memory manufacturer | Micron Technology | `Get-CimInstance Win32_PhysicalMemory` |
 | Disk model | INTEL SSDPEKNU512GZ | `Get-PhysicalDisk` |
-| Disk type | NVMe SSD | `Get-Disk` |
+| Disk type | NVMe SSD | Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType |
 | Disk capacity | 476.94 GB | `Get-PhysicalDisk` |
 | Free space on VM volume C: | 94.05 GB | `Get-Volume -DriveLetter C` |
 | Firmware type | UEFI | `Get-ComputerInfo -Property BiosFirmwareType` |
