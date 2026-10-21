@@ -18,7 +18,7 @@
 | Disk model | INTEL SSDPEKNU512GZ | `Get-PhysicalDisk` |
 | Disk type | NVMe SSD | `Get-Disk` |
 | Disk capacity | 476.94 GB | `Get-PhysicalDisk` |
-| Free space on VM volume C: | 97.12 GB | `Get-Volume -DriveLetter C` |
+| Free space on VM volume C: | 94.05 GB | `Get-Volume -DriveLetter C` |
 | Firmware type | UEFI | `Get-ComputerInfo -Property BiosFirmwareType` |
 | Firmware version | FX506HM.318 | `Get-CimInstance Win32_BIOS` |
 | Firmware release date | 2025-06-17 | `Get-CimInstance Win32_BIOS` |
