@@ -6,6 +6,11 @@ Speed         : 3200
 Manufacturer  : Micron Technology
 PartNumber    : 8ATF2G64HZ-3G2E2    
 
+
+$ram = (Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 1MB
+[PSCustomObject]@{
+    TotalRAM_GB = [math]::Round($ram, 2)
+}
 === Total RAM ===
 
 TotalRAM_GB : 15.73
