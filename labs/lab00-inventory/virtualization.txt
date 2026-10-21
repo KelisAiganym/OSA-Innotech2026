@@ -1,4 +1,4 @@
-﻿Get-CimInstance Win32_Processor \| Select-Object Name, VMMonitorModeExtensions, VirtualizationFirmwareEnabled, SecondLevelAddressTranslationExtensions
+﻿Get-CimInstance Win32_Processor | Select-Object Name, VMMonitorModeExtensions, VirtualizationFirmwareEnabled, SecondLevelAddressTranslationExtensions
 
 Name                                    : 11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
 VMMonitorModeExtensions                 : True
